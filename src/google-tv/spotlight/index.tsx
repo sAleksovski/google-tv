@@ -1,4 +1,5 @@
 import { withFocusable } from '@noriginmedia/react-spatial-navigation';
+import { SPOTLIGHT_TV_ITEM } from 'google-tv/data';
 import React from 'react';
 import { PlayButton, ShowDescription, ShowProvider, ShowTitle, SpotlightContainer, YoutubeLogo } from './styled';
 
@@ -10,14 +11,11 @@ function Spotlight() {
   return (
     <FocusableSpotlightContainer>
       <ShowProvider>
-        <YoutubeLogo /> YouTube
+        <YoutubeLogo /> {SPOTLIGHT_TV_ITEM.provider}
       </ShowProvider>
-      <ShowTitle>The Mandalorian</ShowTitle>
-      <ShowDescription>
-        Google TV Staff Pick | A lone gunfighter makes his way through the outer reaches of the galaxy, far from the
-        authority of the New Republic.
-      </ShowDescription>
-      <FocusablePlayButton>Watch on Youtube</FocusablePlayButton>
+      <ShowTitle>{SPOTLIGHT_TV_ITEM.title}</ShowTitle>
+      <ShowDescription>{SPOTLIGHT_TV_ITEM.description}</ShowDescription>
+      <FocusablePlayButton>Watch on {SPOTLIGHT_TV_ITEM.provider}</FocusablePlayButton>
     </FocusableSpotlightContainer>
   );
 }

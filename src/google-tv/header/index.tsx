@@ -1,4 +1,5 @@
 import { withFocusable } from '@noriginmedia/react-spatial-navigation';
+import { user } from 'google-tv/data';
 import React, { useCallback, useState } from 'react';
 import Avatar from './avatar';
 import HeaderLink from './header-link';
@@ -53,10 +54,7 @@ function Header() {
         </FocusableHeaderLink>
         <HeaderLinkBackground {...focused} />
       </FocusableHeaderLinks>
-      <Avatar
-        name="Stefan"
-        avatarUrl="https://media-exp1.licdn.com/dms/image/C5603AQEdh0QjrNpWkA/profile-displayphoto-shrink_200_200/0?e=1608163200&v=beta&t=W4IWOY1Qbqfk4MLWlurI6zbGkA4sPXKe98oMLt99EmA"
-      />
+      <Avatar name={user.name} avatarUrl={user.avatarUrl} />
     </HeaderContainer>
   );
 }

@@ -1,5 +1,5 @@
 import { withFocusable } from '@noriginmedia/react-spatial-navigation';
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import Avatar from './avatar';
 import HeaderLink from './header-link';
 import { AssistantLogo, HeaderContainer, HeaderLinkBackground, HeaderLinks } from './styled';
@@ -12,39 +12,43 @@ function Header() {
   const [focused, setFocused] = useState({ height: 0, width: 0, top: 0, left: 0, opacity: 0 });
   const [active, setActive] = useState('For you');
 
-  function changeFocused(f: any, label: string) {
-    setFocused({ ...f, opacity: 1 });
-    setActive(label);
-  }
+  const changeFocused = useCallback(
+    ({ label, ...f }: any) => {
+      setFocused({ ...f, opacity: 1 });
+      setActive(label);
+    },
+    [setFocused, setActive],
+  );
 
   return (
     <HeaderContainer>
       <FocusableHeaderLinks>
         <HeaderLink>GoogleTV</HeaderLink>
-        <FocusableHeaderLink active={active === 'Search'} setFocused={(f: any) => changeFocused(f, 'Search')}>
+        <FocusableHeaderLink active={active === 'Search'} label="Search" setFocused={changeFocused}>
           <AssistantLogo active={active === 'Search'} />
           Search
         </FocusableHeaderLink>
         <FocusableHeaderLink
-          active={active === 'For you'}
-          setFocused={(f: any) => changeFocused(f, 'For you')}
           focusKey="initial-focus"
+          active={active === 'For you'}
+          label="For you"
+          setFocused={changeFocused}
         >
           For you
         </FocusableHeaderLink>
-        <FocusableHeaderLink active={active === 'Live'} setFocused={(f: any) => changeFocused(f, 'Live')}>
+        <FocusableHeaderLink active={active === 'Live'} label="Live" setFocused={changeFocused}>
           Live
         </FocusableHeaderLink>
-        <FocusableHeaderLink active={active === 'Movies'} setFocused={(f: any) => changeFocused(f, 'Movies')}>
+        <FocusableHeaderLink active={active === 'Movies'} label="Movies" setFocused={changeFocused}>
           Movies
         </FocusableHeaderLink>
-        <FocusableHeaderLink active={active === 'Shows'} setFocused={(f: any) => changeFocused(f, 'Shows')}>
+        <FocusableHeaderLink active={active === 'Shows'} label="Shows" setFocused={changeFocused}>
           Shows
         </FocusableHeaderLink>
-        <FocusableHeaderLink active={active === 'Apps'} setFocused={(f: any) => changeFocused(f, 'Apps')}>
+        <FocusableHeaderLink active={active === 'Apps'} label="Apps" setFocused={changeFocused}>
           Apps
         </FocusableHeaderLink>
-        <FocusableHeaderLink active={active === 'Library'} setFocused={(f: any) => changeFocused(f, 'Library')}>
+        <FocusableHeaderLink active={active === 'Library'} label="Library" setFocused={changeFocused}>
           Library
         </FocusableHeaderLink>
         <HeaderLinkBackground {...focused} />

@@ -1,13 +1,12 @@
 import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import { StyledHeaderLink } from './styled';
 
-function HeaderLink({ children, focused, setFocused, ...props }: any) {
+function HeaderLink({ children, focused, setFocused, label, ...props }: any) {
   const ref = useRef<typeof StyledHeaderLink>();
   const measureRef = useRef<any>();
 
   useLayoutEffect(() => {
     const clientRect = ref.current as any;
-    console.log(ref);
     measureRef.current = {
       height: clientRect.offsetHeight,
       width: clientRect.offsetWidth,
@@ -18,9 +17,9 @@ function HeaderLink({ children, focused, setFocused, ...props }: any) {
 
   useEffect(() => {
     if (focused) {
-      setFocused(measureRef.current);
+      setFocused({ ...measureRef.current, label });
     }
-  }, [focused, setFocused]);
+  }, [focused, label, setFocused]);
 
   return (
     <StyledHeaderLink ref={ref} {...props} focused={focused}>

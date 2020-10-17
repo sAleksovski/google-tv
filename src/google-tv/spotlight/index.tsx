@@ -1,6 +1,6 @@
 import { withFocusable } from '@noriginmedia/react-spatial-navigation';
-import { SPOTLIGHT_TV_ITEM } from 'google-tv/data';
-import React from 'react';
+import { GoogleTvContext } from 'google-tv/state';
+import React, { useContext } from 'react';
 import ProviderLogo from './provider-logo';
 import { PlayButton, ShowDescription, ShowTitle, SpotlightContainer } from './styled';
 
@@ -8,12 +8,13 @@ const FocusableSpotlightContainer = withFocusable({ trackChildren: true })(Spotl
 const FocusablePlayButton = withFocusable()(PlayButton);
 
 function Spotlight() {
+  const { spotlightItem, resetSpotlightItem } = useContext(GoogleTvContext);
   return (
-    <FocusableSpotlightContainer>
-      <ProviderLogo provider={SPOTLIGHT_TV_ITEM.provider} />
-      <ShowTitle>{SPOTLIGHT_TV_ITEM.title}</ShowTitle>
-      <ShowDescription>{SPOTLIGHT_TV_ITEM.description}</ShowDescription>
-      <FocusablePlayButton>Watch on {SPOTLIGHT_TV_ITEM.provider}</FocusablePlayButton>
+    <FocusableSpotlightContainer onBecameFocused={resetSpotlightItem}>
+      <ProviderLogo provider={spotlightItem.provider} />
+      <ShowTitle>{spotlightItem.title}</ShowTitle>
+      <ShowDescription>{spotlightItem.description}</ShowDescription>
+      <FocusablePlayButton>Watch on {spotlightItem.provider}</FocusablePlayButton>
     </FocusableSpotlightContainer>
   );
 }

@@ -12,6 +12,7 @@ export const ShowDescription = styled.div`
   opacity: 0.8;
   font-size: 20px;
   transition: all 0.5s ease-in-out;
+  height: 46px;
 `;
 
 export const SpotlightContainer = styled.div<FocusableProps>`

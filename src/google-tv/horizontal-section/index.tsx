@@ -1,6 +1,7 @@
 import { withFocusable } from '@noriginmedia/react-spatial-navigation';
 import { TvItem } from 'google-tv/data';
-import React, { useCallback, useRef } from 'react';
+import { GoogleTvContext } from 'google-tv/state';
+import React, { useCallback, useContext, useRef } from 'react';
 import HorizontalSectionListItem from './horizontal-section-list-item';
 import {
   HorizontalSectionContainer,
@@ -19,16 +20,18 @@ interface HorizontalSectionProps {
 
 function HorizontalSection({ title, items }: HorizontalSectionProps) {
   const ref = useRef<any>();
+  const { setSpotlightItem } = useContext(GoogleTvContext);
 
   const onBecameFocused = useCallback(
-    ({ x }) => {
+    ({ x }, { item }) => {
+      setSpotlightItem(item);
       ref.current.scrollTo({
         left: x - 80,
         top: 0,
         behavior: 'smooth',
       });
     },
-    [ref],
+    [ref, setSpotlightItem],
   );
 
   return (

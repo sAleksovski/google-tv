@@ -63,20 +63,20 @@ export const AssistantLogo = ({ active }: { active: boolean }) => (
   <StyledSVG viewBox="0 0 200 172" shape-rendering="geometricPrecision" height="18px" width="18px" {...{ active }}>
     <path
       d="M176.4 60.2c7.1 0 12.9-5.8 12.9-12.9s-5.8-12.9-12.9-12.9-12.9 5.8-12.9 12.9 5.7 12.9 12.9 12.9"
-      fill-opacity="0.8"
+      fillOpacity="0.8"
     ></path>
     <path
       d="M137.7 103.2c14.3 0 25.8-11.6 25.8-25.8S152 51.6 137.7 51.6s-25.8 11.6-25.8 25.8 11.5 25.8 25.8 25.8"
-      fill-opacity="0.8"
+      fillOpacity="0.8"
     ></path>
     <path
       d="M137.7 172c16.6 0 30.1-13.5 30.1-30.2s-13.5-30.1-30.2-30.1c-16.6 0-30.1 13.5-30.1 30.1 0 16.7 13.5 30.2 30.2 30.2"
-      fill-opacity="0.8"
+      fillOpacity="0.8"
     ></path>
     <path
       d="M51.6 103.2c28.5 0 51.6-23.1 51.6-51.6S80.1 0 51.6 0 0 23.1 0 51.6s23.1 51.6 51.6 51.6"
       fill={active ? 'black' : '#fff'}
-      fill-opacity="0.8"
+      fillOpacity="0.8"
     ></path>
   </StyledSVG>
 );

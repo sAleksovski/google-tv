@@ -17,7 +17,7 @@ const westworld: TvItem = {
   title: 'Westworld',
   description:
     'A dark odyssey about the dawn of artificial consciousness and the evolution of sin. Set at the intersection of the near future and the reimagined past, it explores a world in which every human appetite, no matter how noble or depraved, can be indulged.',
-  provider: 'HBO Max',
+  provider: 'HBO',
   backdropImage: 'https://image.tmdb.org/t/p/original/yGNnjoIGOdQy3douq60tULY8teK.jpg',
 };
 

@@ -1,8 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const SpotlightContainer = styled.div`
+// TODO extract to a better place
+interface FocusableProps {
+  focused: boolean;
+  hasFocusedChild?: boolean;
+}
+
+export const ShowDescription = styled.div`
+  color: white;
+  opacity: 0.8;
+  font-size: 20px;
+  transition: all 0.5s ease-in-out;
+`;
+
+export const SpotlightContainer = styled.div<FocusableProps>`
   padding: 256px 80px 24px;
+  transition: all 0.5s ease-in-out;
+  ${({ hasFocusedChild }) =>
+    hasFocusedChild &&
+    `
+    margin-bottom: 48px;
+    padding: 384px 80px 48px;
+    ${ShowDescription} {
+      margin-bottom: 32px;
+    }
+  `};
 `;
 
 export const ShowTitle = styled.h1`
@@ -12,21 +35,14 @@ export const ShowTitle = styled.h1`
   margin-top: 0;
 `;
 
-export const ShowDescription = styled.div`
-  color: white;
-  opacity: 0.8;
-  font-size: 20px;
-  margin-bottom: 32px;
-`;
-
-export const PlayButton = styled.span<{ focused: boolean }>`
+export const PlayButton = styled.span<FocusableProps>`
   display: inline-block;
   padding: 12px 16px;
-  border-radius: 21px;
+  border-radius: 26px;
   color: black;
   background-color: white;
   opacity: 0;
-  font-weight: bold;
+  font-size: 24px;
   ${({ focused }) =>
     focused &&
     `

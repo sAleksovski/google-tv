@@ -4,9 +4,8 @@ import React from 'react';
 import ProviderLogo from './provider-logo';
 import { PlayButton, ShowDescription, ShowTitle, SpotlightContainer } from './styled';
 
+const FocusableSpotlightContainer = withFocusable({ trackChildren: true })(SpotlightContainer);
 const FocusablePlayButton = withFocusable()(PlayButton);
-
-const FocusableSpotlightContainer = withFocusable()(SpotlightContainer);
 
 function Spotlight() {
   return (

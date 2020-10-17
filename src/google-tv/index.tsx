@@ -7,9 +7,7 @@ import HorizontalSection from './horizontal-section';
 import Navigation from './navigation';
 import Spotlight from './spotlight';
 
-initNavigation({
-  debug: true,
-});
+initNavigation();
 
 function GoogleTV() {
   return (

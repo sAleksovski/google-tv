@@ -1,15 +1,25 @@
 import { TvItem } from 'google-tv/data';
 import styled from 'styled-components';
 
-export const HorizontalSectionContainer = styled.div`
-  margin-bottom: 32px;
-`;
-
 export const HorizontalSectionLabel = styled.div`
   color: white;
-  font-size: 20px;
+  font-size: 24px;
+  height: 32px;
   margin-bottom: 8px;
+  transition: all 0.25s ease-in-out;
   padding: 0px 80px;
+`;
+
+export const HorizontalSectionContainer = styled.div<{ hasFocusedChild: boolean }>`
+  margin-bottom: 32px;
+
+  ${({ hasFocusedChild }) =>
+    hasFocusedChild &&
+    `
+    ${HorizontalSectionLabel} {
+      font-size: 32px;
+    }
+  `}
 `;
 
 export const ScrollableHorizontalSection = styled.div`

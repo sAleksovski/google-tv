@@ -11,8 +11,8 @@ import {
   ScrollableHorizontalSection,
 } from './styled';
 
+const FocusableHorizontalSectionContainer = withFocusable({ trackChildren: true })(HorizontalSectionContainer);
 const FocusableHorizontalSectionListItem = withFocusable()(HorizontalSectionListItem);
-const FocusableHorizontalSectionContainer = withFocusable()(HorizontalSectionContainer);
 
 interface HorizontalSectionProps {
   scrollToTop?: boolean;

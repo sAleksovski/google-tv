@@ -3,7 +3,7 @@ import { user } from 'google-tv/data';
 import React, { useCallback, useState } from 'react';
 import Avatar from './avatar';
 import HeaderLink from './header-link';
-import { AssistantLogo, HeaderContainer, HeaderLinkBackground, HeaderLinks } from './styled';
+import { AssistantLogo, GoogleTvLogo, HeaderContainer, HeaderLinkBackground, HeaderLinks } from './styled';
 
 const FocusableHeaderLinks = withFocusable()(HeaderLinks);
 
@@ -24,7 +24,9 @@ function Header() {
   return (
     <HeaderContainer>
       <FocusableHeaderLinks>
-        <HeaderLink>GoogleTV</HeaderLink>
+        <HeaderLink>
+          <GoogleTvLogo />
+        </HeaderLink>
         <FocusableHeaderLink active={active === 'Search'} label="Search" setFocused={changeFocused}>
           <AssistantLogo active={active === 'Search'} />
           Search

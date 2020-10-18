@@ -8,8 +8,8 @@ export interface TvItem {
 const theMandalorian: TvItem = {
   title: 'The Mandalorian',
   description:
-    'Google TV Staff Pick | A lone gunfighter makes his way through the outer reaches of the galaxy, far from the authority of the New Republic.',
-  provider: 'YouTube',
+    'After the fall of the Galactic Empire, lawlessness has spread throughout the galaxy. A lone gunfighter makes his way through the outer reaches, earning his keep as a bounty hunter.',
+  provider: 'Disney+',
   backdropImage: 'https://image.tmdb.org/t/p/original/o7qi2v4uWQ8bZ1tW3KI0Ztn2epk.jpg',
 };
 

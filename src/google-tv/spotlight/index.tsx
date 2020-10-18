@@ -1,6 +1,7 @@
 import { withFocusable } from '@noriginmedia/react-spatial-navigation';
 import { GoogleTvContext } from 'google-tv/state';
-import React, { useContext } from 'react';
+import { scrollToY } from 'google-tv/utils';
+import React, { useCallback, useContext } from 'react';
 import ProviderLogo from './provider-logo';
 import { PlayButton, ShowDescription, ShowTitle, SpotlightContainer } from './styled';
 
@@ -9,8 +10,12 @@ const FocusablePlayButton = withFocusable()(PlayButton);
 
 function Spotlight() {
   const { spotlightItem, resetSpotlightItem } = useContext(GoogleTvContext);
+  const onBecameFocused = useCallback(() => {
+    resetSpotlightItem();
+    scrollToY(0);
+  }, [resetSpotlightItem]);
   return (
-    <FocusableSpotlightContainer onBecameFocused={resetSpotlightItem}>
+    <FocusableSpotlightContainer onBecameFocused={onBecameFocused}>
       <ProviderLogo provider={spotlightItem.provider} />
       <ShowTitle>{spotlightItem.title}</ShowTitle>
       <ShowDescription>{spotlightItem.description}</ShowDescription>

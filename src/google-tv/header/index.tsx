@@ -1,5 +1,6 @@
 import { withFocusable } from '@noriginmedia/react-spatial-navigation';
 import { user } from 'google-tv/data';
+import { scrollToY } from 'google-tv/utils';
 import React, { useCallback, useState } from 'react';
 import Avatar from './avatar';
 import HeaderLink from './header-link';
@@ -17,6 +18,7 @@ function Header() {
     ({ label, ...f }: any) => {
       setFocused({ ...f, opacity: 1 });
       setActive(label);
+      scrollToY(0);
     },
     [setFocused, setActive],
   );

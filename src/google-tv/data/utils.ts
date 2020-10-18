@@ -1,5 +1,6 @@
 export const shuffle = <T>(array: T[]): T[] => {
   let currentIndex = array.length;
+  const arrayCopy = [...array];
 
   // While there remain elements to shuffle...
   while (0 !== currentIndex) {
@@ -8,10 +9,10 @@ export const shuffle = <T>(array: T[]): T[] => {
     currentIndex -= 1;
 
     // And swap it with the current element.
-    const temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
+    const temporaryValue = arrayCopy[currentIndex];
+    arrayCopy[currentIndex] = arrayCopy[randomIndex];
+    arrayCopy[randomIndex] = temporaryValue;
   }
 
-  return array;
+  return arrayCopy;
 };

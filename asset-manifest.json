@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.b456c01f.chunk.css",
-    "main.js": "/static/js/main.573db136.chunk.js",
-    "main.js.map": "/static/js/main.573db136.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.95d80bec.js",
-    "runtime-main.js.map": "/static/js/runtime-main.95d80bec.js.map",
-    "static/js/2.30092ec2.chunk.js": "/static/js/2.30092ec2.chunk.js",
-    "static/js/2.30092ec2.chunk.js.map": "/static/js/2.30092ec2.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.ab6564dc7b15fc0454f6a23e9be8f94e.js": "/precache-manifest.ab6564dc7b15fc0454f6a23e9be8f94e.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.b456c01f.chunk.css.map": "/static/css/main.b456c01f.chunk.css.map",
-    "static/js/2.30092ec2.chunk.js.LICENSE.txt": "/static/js/2.30092ec2.chunk.js.LICENSE.txt"
+    "main.css": "/google-tv/static/css/main.b456c01f.chunk.css",
+    "main.js": "/google-tv/static/js/main.bc93e56e.chunk.js",
+    "main.js.map": "/google-tv/static/js/main.bc93e56e.chunk.js.map",
+    "runtime-main.js": "/google-tv/static/js/runtime-main.187f3b76.js",
+    "runtime-main.js.map": "/google-tv/static/js/runtime-main.187f3b76.js.map",
+    "static/js/2.3c28fa6f.chunk.js": "/google-tv/static/js/2.3c28fa6f.chunk.js",
+    "static/js/2.3c28fa6f.chunk.js.map": "/google-tv/static/js/2.3c28fa6f.chunk.js.map",
+    "index.html": "/google-tv/index.html",
+    "precache-manifest.2690f5a9c2a04c302f9135f08cc7e615.js": "/google-tv/precache-manifest.2690f5a9c2a04c302f9135f08cc7e615.js",
+    "service-worker.js": "/google-tv/service-worker.js",
+    "static/css/main.b456c01f.chunk.css.map": "/google-tv/static/css/main.b456c01f.chunk.css.map",
+    "static/js/2.3c28fa6f.chunk.js.LICENSE.txt": "/google-tv/static/js/2.3c28fa6f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.95d80bec.js",
-    "static/js/2.30092ec2.chunk.js",
+    "static/js/runtime-main.187f3b76.js",
+    "static/js/2.3c28fa6f.chunk.js",
     "static/css/main.b456c01f.chunk.css",
-    "static/js/main.573db136.chunk.js"
+    "static/js/main.bc93e56e.chunk.js"
   ]
 }

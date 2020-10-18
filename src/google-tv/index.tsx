@@ -7,11 +7,12 @@ import HorizontalSection from './horizontal-section';
 import Navigation from './navigation';
 import Spotlight from './spotlight';
 import GoogleTvProvider from './state';
+import { useDisableScroll } from './utils';
 
 initNavigation();
 
 function GoogleTV() {
-  console.log(IN_YOUR_LIBRARY);
+  useDisableScroll();
   return (
     <GoogleTvProvider>
       <Navigation>

@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/google-tv/static/css/main.b456c01f.chunk.css",
-    "main.js": "/google-tv/static/js/main.bc93e56e.chunk.js",
-    "main.js.map": "/google-tv/static/js/main.bc93e56e.chunk.js.map",
+    "main.js": "/google-tv/static/js/main.dc18486f.chunk.js",
+    "main.js.map": "/google-tv/static/js/main.dc18486f.chunk.js.map",
     "runtime-main.js": "/google-tv/static/js/runtime-main.187f3b76.js",
     "runtime-main.js.map": "/google-tv/static/js/runtime-main.187f3b76.js.map",
     "static/js/2.3c28fa6f.chunk.js": "/google-tv/static/js/2.3c28fa6f.chunk.js",
     "static/js/2.3c28fa6f.chunk.js.map": "/google-tv/static/js/2.3c28fa6f.chunk.js.map",
     "index.html": "/google-tv/index.html",
-    "precache-manifest.744c22dd10938b8183fcb520184c5960.js": "/google-tv/precache-manifest.744c22dd10938b8183fcb520184c5960.js",
+    "precache-manifest.4a250d81d9dfe4c586984d8b490ec75e.js": "/google-tv/precache-manifest.4a250d81d9dfe4c586984d8b490ec75e.js",
     "service-worker.js": "/google-tv/service-worker.js",
     "static/css/main.b456c01f.chunk.css.map": "/google-tv/static/css/main.b456c01f.chunk.css.map",
     "static/js/2.3c28fa6f.chunk.js.LICENSE.txt": "/google-tv/static/js/2.3c28fa6f.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.187f3b76.js",
     "static/js/2.3c28fa6f.chunk.js",
     "static/css/main.b456c01f.chunk.css",
-    "static/js/main.bc93e56e.chunk.js"
+    "static/js/main.dc18486f.chunk.js"
   ]
 }

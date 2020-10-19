@@ -6,17 +6,16 @@ import Avatar from './avatar';
 import HeaderLink from './header-link';
 import { AssistantLogo, GoogleTvLogo, HeaderContainer, HeaderLinkBackground, HeaderLinks } from './styled';
 
-const FocusableHeaderLinks = withFocusable()(HeaderLinks);
-
+const FocusableHeaderLinks = withFocusable({ trackChildren: true })(HeaderLinks);
 const FocusableHeaderLink = withFocusable()(HeaderLink);
 
 function Header() {
-  const [focused, setFocused] = useState({ height: 0, width: 0, top: 0, left: 0, opacity: 0 });
+  const [focused, setFocused] = useState({ height: 0, width: 0, top: 0, left: 0, display: 'none' });
   const [active, setActive] = useState('For you');
 
   const changeFocused = useCallback(
     ({ label, ...f }: any) => {
-      setFocused({ ...f, opacity: 1 });
+      setFocused({ ...f, display: 'block' });
       setActive(label);
       scrollToY(0);
     },

@@ -8,39 +8,20 @@ export const HeaderContainer = styled.div`
   align-items: center;
 `;
 
-export const HeaderLinks = styled.div`
-  display: flex;
-`;
-
-export const StyledHeaderLink = styled.div<{ active?: boolean }>`
-  padding: 12px 16px;
-  margin: 0 16px;
-  border-radius: 21px;
-  color: white;
-  display: flex;
-  align-items: center;
-  opacity: 0.8;
-  ${({ active }) =>
-    active &&
-    `
-    color: black;
-  `}
-  transition: all .35s ease-in-out;
-`;
-
 export const HeaderLinkBackground = styled.div<{
   height: number;
   width: number;
   top: number;
   left: number;
-  opacity: number;
+  display: string;
 }>`
   width: ${({ width }) => width}px;
   height: ${({ height }) => height}px;
   top: ${({ top }) => top}px;
   left: ${({ left }) => left}px;
   position: absolute;
-  ${({ opacity }) => (opacity === 1 ? 'block' : 'display: none')};
+  opacity: 0.2;
+  display: ${({ display }) => `${display}`};
 
   border-radius: 21px;
   background-color: white;
@@ -48,6 +29,35 @@ export const HeaderLinkBackground = styled.div<{
 
   z-index: -1;
   transition: all 0.35s ease-in-out;
+`;
+
+export const HeaderLinks = styled.div<{ hasFocusedChild: boolean }>`
+  display: flex;
+
+  ${({ hasFocusedChild }) =>
+    hasFocusedChild &&
+    `
+    ${HeaderLinkBackground} {
+      opacity: 1;
+    }
+  `}
+`;
+
+export const StyledHeaderLink = styled.div<{ active?: boolean; focused: boolean }>`
+  padding: 12px 16px;
+  margin: 0 16px;
+  border-radius: 21px;
+  color: white;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+  ${({ active, focused }) =>
+    active &&
+    focused &&
+    `
+    color: black;
+  `}
+  transition: all .35s ease-in-out;
 `;
 
 const StyledSVG = styled.svg<{ active: boolean }>`

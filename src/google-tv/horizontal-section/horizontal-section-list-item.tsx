@@ -7,10 +7,10 @@ import {
   HorizontalSectionListItemTitle,
 } from './styled';
 
-function HorizontalSectionListItem({ focused, item }: { focused: boolean; item: TvItem }) {
+function HorizontalSectionListItem({ focused, item, forwardRef }: { focused: boolean; item: TvItem; forwardRef: any }) {
   return (
     <HorizontalSectionListItemContainer {...{ focused, item }}>
-      <HorizontalSectionListItemImage {...{ focused, item }}>
+      <HorizontalSectionListItemImage {...{ focused, item }} ref={forwardRef}>
         <HorizontalSectionListItemImageDarken {...{ focused, item }} />
       </HorizontalSectionListItemImage>
       <HorizontalSectionListItemTitle>{item.title}</HorizontalSectionListItemTitle>

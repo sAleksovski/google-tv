@@ -23,7 +23,8 @@ interface HorizontalSectionProps {
 function HorizontalSection({ title, items, scrollToTop }: HorizontalSectionProps) {
   const ref = useRef<any>();
   const containerRef = useRef<any>();
-  const { setSpotlightItem } = useContext(GoogleTvContext);
+  const childRefs = useRef<{ [key: string]: any }>({});
+  const { setSpotlightItem, startPlayingVideo } = useContext(GoogleTvContext);
 
   const onBecameFocused = useCallback(
     ({ x }, { item }) => {
@@ -34,12 +35,19 @@ function HorizontalSection({ title, items, scrollToTop }: HorizontalSectionProps
         scrollToRef(containerRef);
       }
       ref.current.scrollTo({
-        left: x - 80,
+        left: x - 64,
         top: 0,
         behavior: 'smooth',
       });
     },
     [ref, containerRef, scrollToTop, setSpotlightItem],
+  );
+
+  const onEnterPress = useCallback(
+    ({ item }: { item: TvItem }) => {
+      startPlayingVideo(item, childRefs.current[item.id].getBoundingClientRect());
+    },
+    [startPlayingVideo],
   );
 
   return (
@@ -50,9 +58,11 @@ function HorizontalSection({ title, items, scrollToTop }: HorizontalSectionProps
           <HorizontalSectionList>
             {items.map((item: TvItem) => (
               <FocusableHorizontalSectionListItem
-                key={item.backdropImage}
+                forwardRef={(imageRef: any) => (childRefs.current[item.id] = imageRef)}
+                key={item.id}
                 item={item}
                 onBecameFocused={onBecameFocused}
+                onEnterPress={onEnterPress}
               />
             ))}
           </HorizontalSectionList>

@@ -8,6 +8,7 @@ import Navigation from './navigation';
 import Spotlight from './spotlight';
 import GoogleTvProvider from './state';
 import { useDisableScroll } from './utils';
+import VideoPlayer from './video-player';
 
 initNavigation();
 
@@ -25,6 +26,7 @@ function GoogleTV() {
         <HorizontalSection title="Bingeworthy dramas" items={BINGEWORTHY_DRAMAS} />
         <HorizontalSection title="In your library" items={IN_YOUR_LIBRARY} />
       </Navigation>
+      <VideoPlayer />
     </GoogleTvProvider>
   );
 }

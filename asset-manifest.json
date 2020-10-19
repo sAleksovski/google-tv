@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/google-tv/static/css/main.b456c01f.chunk.css",
-    "main.js": "/google-tv/static/js/main.f60a10dd.chunk.js",
-    "main.js.map": "/google-tv/static/js/main.f60a10dd.chunk.js.map",
+    "main.js": "/google-tv/static/js/main.19fb51f3.chunk.js",
+    "main.js.map": "/google-tv/static/js/main.19fb51f3.chunk.js.map",
     "runtime-main.js": "/google-tv/static/js/runtime-main.187f3b76.js",
     "runtime-main.js.map": "/google-tv/static/js/runtime-main.187f3b76.js.map",
-    "static/js/2.8c57212c.chunk.js": "/google-tv/static/js/2.8c57212c.chunk.js",
-    "static/js/2.8c57212c.chunk.js.map": "/google-tv/static/js/2.8c57212c.chunk.js.map",
+    "static/js/2.047f42f8.chunk.js": "/google-tv/static/js/2.047f42f8.chunk.js",
+    "static/js/2.047f42f8.chunk.js.map": "/google-tv/static/js/2.047f42f8.chunk.js.map",
     "index.html": "/google-tv/index.html",
-    "precache-manifest.80f45f30b01359ad1d7ad106eabdffa9.js": "/google-tv/precache-manifest.80f45f30b01359ad1d7ad106eabdffa9.js",
+    "precache-manifest.f4acba252af54d412dff4fa1c1ce18cd.js": "/google-tv/precache-manifest.f4acba252af54d412dff4fa1c1ce18cd.js",
     "service-worker.js": "/google-tv/service-worker.js",
     "static/css/main.b456c01f.chunk.css.map": "/google-tv/static/css/main.b456c01f.chunk.css.map",
-    "static/js/2.8c57212c.chunk.js.LICENSE.txt": "/google-tv/static/js/2.8c57212c.chunk.js.LICENSE.txt"
+    "static/js/2.047f42f8.chunk.js.LICENSE.txt": "/google-tv/static/js/2.047f42f8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.187f3b76.js",
-    "static/js/2.8c57212c.chunk.js",
+    "static/js/2.047f42f8.chunk.js",
     "static/css/main.b456c01f.chunk.css",
-    "static/js/main.f60a10dd.chunk.js"
+    "static/js/main.19fb51f3.chunk.js"
   ]
 }

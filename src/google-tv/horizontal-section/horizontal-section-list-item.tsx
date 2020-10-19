@@ -4,6 +4,7 @@ import {
   HorizontalSectionListItemContainer,
   HorizontalSectionListItemImage,
   HorizontalSectionListItemImageDarken,
+  HorizontalSectionListItemSubtitle,
   HorizontalSectionListItemTitle,
 } from './styled';
 
@@ -14,6 +15,7 @@ function HorizontalSectionListItem({ focused, item, forwardRef }: { focused: boo
         <HorizontalSectionListItemImageDarken {...{ focused, item }} />
       </HorizontalSectionListItemImage>
       <HorizontalSectionListItemTitle>{item.title}</HorizontalSectionListItemTitle>
+      <HorizontalSectionListItemSubtitle {...{ focused }}>{item.provider}</HorizontalSectionListItemSubtitle>
     </HorizontalSectionListItemContainer>
   );
 }

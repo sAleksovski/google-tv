@@ -1,5 +1,5 @@
 import { TvItem } from 'google-tv/data';
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 export const HorizontalSectionLabel = styled.div`
   color: white;
@@ -49,6 +49,20 @@ export const HorizontalSectionListItemContainer = styled.div<{ focused: boolean;
   `}
 `;
 
+const glow = keyframes`
+  from {
+    box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 1);
+  }
+  to {
+    box-shadow: 0px 0px 4px 8px rgba(255, 255, 255, .6);
+  }
+`;
+
+const glowRule = css`
+  animation: ${glow} 1s ease-in-out infinite alternate;
+  animation-delay: 0.25s;
+`;
+
 export const HorizontalSectionListItemImage = styled.div<{ focused: boolean; item: TvItem }>`
   height: 200px;
   width: 300px;
@@ -57,6 +71,13 @@ export const HorizontalSectionListItemImage = styled.div<{ focused: boolean; ite
   background-size: cover;
   margin-bottom: 16px;
   position: relative;
+  backface-visibility: visible;
+
+  ${({ focused }) =>
+    focused &&
+    css`
+      ${glowRule}
+    `}
 `;
 
 export const HorizontalSectionListItemImageDarken = styled.div<{ focused: boolean; item: TvItem }>`
@@ -74,4 +95,16 @@ export const HorizontalSectionListItemImageDarken = styled.div<{ focused: boolea
 export const HorizontalSectionListItemTitle = styled.div`
   color: white;
   font-size: 20px;
+`;
+
+export const HorizontalSectionListItemSubtitle = styled.div<{ focused: boolean }>`
+  color: white;
+  font-size: 18px;
+  opacity: 0;
+
+  ${({ focused }) =>
+    focused &&
+    `
+      opacity: 0.7;
+    `}
 `;

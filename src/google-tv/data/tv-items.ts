@@ -226,7 +226,6 @@ const strangerThings: TvItem = {
   youtubeVideoId: 'b9EkMc79ZSU',
 };
 
-
 const peakyBlinders: TvItem = {
   id: 'peakyBlinders',
   title: 'Peaky Blinders',

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "af2cb50e9d872733640c85e601bc0fe0",
+    "revision": "a6e981097a9f638f2e8caa53f255ccc6",
     "url": "/google-tv/index.html"
   },
   {
-    "revision": "648241d5c8dbb3a5be3e",
+    "revision": "32641c45fe4c9ee206a9",
     "url": "/google-tv/static/css/main.b456c01f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/google-tv/static/js/2.047f42f8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "648241d5c8dbb3a5be3e",
-    "url": "/google-tv/static/js/main.cf577091.chunk.js"
+    "revision": "32641c45fe4c9ee206a9",
+    "url": "/google-tv/static/js/main.f5984540.chunk.js"
   },
   {
     "revision": "8aba779be171a31a7fbc",

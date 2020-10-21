@@ -1,6 +1,6 @@
 import { withFocusable } from '@noriginmedia/react-spatial-navigation';
 import { GoogleTvContext } from 'google-tv/state';
-import { scrollToY } from 'google-tv/utils';
+import { remToPx, scrollToY } from 'google-tv/utils';
 import React, { useCallback, useContext, useRef } from 'react';
 import ProviderLogo from './provider-logo';
 import { PlayButton, ShowDescription, ShowTitle, SpotlightContainer } from './styled';
@@ -17,7 +17,12 @@ function Spotlight() {
   }, [resetSpotlightItem]);
   const onEnterPress = useCallback(() => {
     const { top, left, height, width } = playButtonRef.current.getBoundingClientRect();
-    startPlayingVideo(spotlightItem, { top: top - 12, left: left - 16, height: height + 24, width: width + 32 });
+    startPlayingVideo(spotlightItem, {
+      top: top - remToPx(0.75),
+      left: left - remToPx(1),
+      height: height + remToPx(1.5),
+      width: width + remToPx(2),
+    });
   }, [spotlightItem, startPlayingVideo]);
   return (
     <FocusableSpotlightContainer onBecameFocused={onBecameFocused}>

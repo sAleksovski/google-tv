@@ -3,21 +3,21 @@ import styled, { css, keyframes } from 'styled-components';
 
 export const HorizontalSectionLabel = styled.div`
   color: white;
-  font-size: 24px;
-  height: 32px;
-  margin-bottom: 8px;
+  font-size: 1.5rem;
+  height: 2rem;
+  margin-bottom: 0.5rem;
   transition: all 0.25s ease-in-out;
-  padding: 0px 80px;
+  padding: 0 5rem;
 `;
 
 export const HorizontalSectionContainer = styled.div<{ hasFocusedChild: boolean }>`
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 
   ${({ hasFocusedChild }) =>
     hasFocusedChild &&
     `
     ${HorizontalSectionLabel} {
-      font-size: 32px;
+      font-size: 2rem;
     }
   `}
 `;
@@ -35,12 +35,12 @@ export const ScrollableHorizontalSection = styled.div`
 export const HorizontalSectionList = styled.div`
   flex-shrink: 0;
   display: flex;
-  padding: 0 64px;
+  padding: 0 4rem;
   position: relative;
 `;
 
 export const HorizontalSectionListItemContainer = styled.div<{ focused: boolean; item: TvItem }>`
-  padding: 16px;
+  padding: 1rem;
   transition: all 0.25s ease-in-out;
   ${({ focused }) =>
     focused &&
@@ -51,10 +51,10 @@ export const HorizontalSectionListItemContainer = styled.div<{ focused: boolean;
 
 const glow = keyframes`
   from {
-    box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 1);
+    box-shadow: 0 0 0.125rem 0.125rem rgba(255, 255, 255, 1);
   }
   to {
-    box-shadow: 0px 0px 4px 8px rgba(255, 255, 255, .6);
+    box-shadow: 0 0 0.25rem 0.5rem rgba(255, 255, 255, .6);
   }
 `;
 
@@ -64,12 +64,12 @@ const glowRule = css`
 `;
 
 export const HorizontalSectionListItemImage = styled.div<{ focused: boolean; item: TvItem }>`
-  height: 200px;
-  width: 300px;
-  border-radius: 8px;
+  height: 12.5rem;
+  width: 18.75rem;
+  border-radius: 0.5rem;
   background: url('${({ item }) => item.backdropImage}') no-repeat center center;
   background-size: cover;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   position: relative;
   backface-visibility: visible;
 
@@ -82,9 +82,9 @@ export const HorizontalSectionListItemImage = styled.div<{ focused: boolean; ite
 
 export const HorizontalSectionListItemImageDarken = styled.div<{ focused: boolean; item: TvItem }>`
   position: absolute;
-  height: 200px;
-  width: 300px;
-  border-radius: 8px;
+  height: 12.5rem;
+  width: 18.75rem;
+  border-radius: 0.5rem;
   background: linear-gradient(
     rgba(2, 2, 2, ${({ focused }) => (focused ? '0' : '0.3')}),
     rgba(2, 2, 2, ${({ focused }) => (focused ? '0' : '0.3')})
@@ -94,12 +94,12 @@ export const HorizontalSectionListItemImageDarken = styled.div<{ focused: boolea
 
 export const HorizontalSectionListItemTitle = styled.div`
   color: white;
-  font-size: 20px;
+  font-size: 1.25rem;
 `;
 
 export const HorizontalSectionListItemSubtitle = styled.div<{ focused: boolean }>`
   color: white;
-  font-size: 18px;
+  font-size: 1.125rem;
   opacity: 0;
 
   ${({ focused }) =>

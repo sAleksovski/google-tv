@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const IMAGE_SIZE = 42;
+const IMAGE_SIZE = 2.5;
 
 interface ImageProps {
   avatarUrl: string;
@@ -8,8 +8,8 @@ interface ImageProps {
 }
 
 export const Image = styled.div<ImageProps>`
-  width: ${IMAGE_SIZE}px;
-  height: ${IMAGE_SIZE}px;
+  width: ${IMAGE_SIZE}rem;
+  height: ${IMAGE_SIZE}rem;
   border-radius: 100%;
   background-image: url('${(props) => props.avatarUrl}');
   background-position: 50% 50%;
@@ -25,13 +25,13 @@ interface LetterProps {
 }
 
 export const Letter = styled.div<LetterProps>`
-  width: ${IMAGE_SIZE}px;
-  height: ${IMAGE_SIZE}px;
+  width: ${IMAGE_SIZE}rem;
+  height: ${IMAGE_SIZE}rem;
   border-radius: 100%;
   text-transform: uppercase;
   color: #fff;
   background: ${(props) => props.color};
-  font-size: ${IMAGE_SIZE * 0.66}px;
+  font-size: ${IMAGE_SIZE * 0.66}rem;
   user-select: none;
   & > span {
     display: flex;

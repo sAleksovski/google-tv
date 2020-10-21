@@ -1,7 +1,7 @@
 import { withFocusable } from '@noriginmedia/react-spatial-navigation';
 import { TvItem } from 'google-tv/data';
 import { GoogleTvContext } from 'google-tv/state';
-import { scrollToRef, scrollToY } from 'google-tv/utils';
+import { remToPx, scrollToRef, scrollToY } from 'google-tv/utils';
 import React, { useCallback, useContext, useRef } from 'react';
 import HorizontalSectionListItem from './horizontal-section-list-item';
 import {
@@ -35,7 +35,7 @@ function HorizontalSection({ title, items, scrollToTop }: HorizontalSectionProps
         scrollToRef(containerRef);
       }
       ref.current.scrollTo({
-        left: x - 64,
+        left: x - remToPx(4),
         top: 0,
         behavior: 'smooth',
       });

@@ -55,27 +55,25 @@ export const StyledHeaderLink = styled.div<{ active?: boolean; focused: boolean 
     focused &&
     `
     color: black;
+
+    ${StyledSVG} path {
+      fill: black;
+    }
   `}
   transition: all .35s ease-in-out;
 `;
 
-const StyledSVG = styled.svg<{ active: boolean }>`
+const StyledSVG = styled.svg`
   margin-right: 0.5rem;
 
   path {
     transition: all 0.35s ease-in-out;
-    fill: ${({ active }) => (active ? 'black' : '#fff')};
+    fill: white;
   }
 `;
 
-export const AssistantLogo = ({ active }: { active: boolean }) => (
-  <StyledSVG
-    viewBox="0 0 200 172"
-    shape-rendering="geometricPrecision"
-    height="1.125rem"
-    width="1.125rem"
-    {...{ active }}
-  >
+export const AssistantLogo = () => (
+  <StyledSVG viewBox="0 0 200 172" shape-rendering="geometricPrecision" height="1.125rem" width="1.125rem">
     <path
       d="M176.4 60.2c7.1 0 12.9-5.8 12.9-12.9s-5.8-12.9-12.9-12.9-12.9 5.8-12.9 12.9 5.7 12.9 12.9 12.9"
       fillOpacity="0.8"
@@ -90,7 +88,6 @@ export const AssistantLogo = ({ active }: { active: boolean }) => (
     ></path>
     <path
       d="M51.6 103.2c28.5 0 51.6-23.1 51.6-51.6S80.1 0 51.6 0 0 23.1 0 51.6s23.1 51.6 51.6 51.6"
-      fill={active ? 'black' : '#fff'}
       fillOpacity="0.8"
     ></path>
   </StyledSVG>

@@ -29,7 +29,7 @@ function Header() {
           <GoogleTvLogo />
         </HeaderLink>
         <FocusableHeaderLink active={active === 'Search'} label="Search" setFocused={changeFocused}>
-          <AssistantLogo active={active === 'Search'} />
+          <AssistantLogo />
           Search
         </FocusableHeaderLink>
         <FocusableHeaderLink

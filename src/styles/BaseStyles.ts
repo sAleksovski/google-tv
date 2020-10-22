@@ -8,6 +8,11 @@ export default createGlobalStyle`
 
   :root {
     --base-font-size: 12px;
+
+    @media(min-height: 800px) {
+      --base-font-size: 14px;
+    }
+
     @media(min-height: 1080px) {
       --base-font-size: 16px;
     }

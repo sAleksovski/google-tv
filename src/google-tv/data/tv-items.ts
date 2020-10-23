@@ -226,6 +226,15 @@ const strangerThings: TvItem = {
   youtubeVideoId: 'b9EkMc79ZSU',
 };
 
+const peakyBlinders: TvItem = {
+  id: 'peakyBlinders',
+  title: 'Peaky Blinders',
+  description: 'A gangster family epic set in 1919 Birmingham, England and centered on a gang who sew razor blades in the peaks of their caps, and their fierce boss Tommy Shelby, who means to move up in the world.',
+  backdropImage: 'https://image.tmdb.org/t/p/original/wiE9doxiLwq3WCGamDIOb2PqBqc.jpg',
+  provider: 'Netflix',
+  youtubeVideoId: 'oVzVdvGIC7U',
+};
+
 export const TV_SHOWS = [
   theMandalorian,
   westworld,
@@ -249,4 +258,5 @@ export const TV_SHOWS = [
   raisedByWolves,
   dark,
   strangerThings,
+  peakyBlinders,
 ];

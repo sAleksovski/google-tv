@@ -233,7 +233,7 @@ const peakyBlinders: TvItem = {
   backdropImage: 'https://image.tmdb.org/t/p/original/wiE9doxiLwq3WCGamDIOb2PqBqc.jpg',
   provider: 'Netflix',
   youtubeVideoId: 'oVzVdvGIC7U',
-}
+};
 
 export const TV_SHOWS = [
   theMandalorian,

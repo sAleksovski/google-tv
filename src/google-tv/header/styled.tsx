@@ -27,7 +27,6 @@ export const HeaderLinkBackground = styled.div<{
   background-color: white;
   color: black;
 
-  z-index: -1;
   transition: all 0.35s ease-in-out;
 `;
 
@@ -61,6 +60,7 @@ export const StyledHeaderLink = styled.div<{ active?: boolean; focused: boolean 
     }
   `}
   transition: all .35s ease-in-out;
+  z-index: 1;
 `;
 
 const StyledSVG = styled.svg`

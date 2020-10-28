@@ -15,7 +15,8 @@ export interface TvItemCoor {
 
 export interface GoogleTvContextState {
   spotlightItem: TvItem;
-  setSpotlightItem: (spotlightItem: TvItem) => void;
+  isOnTop: true;
+  setSpotlightItem: (spotlightItem: TvItem, isOnTop?: boolean) => void;
   resetSpotlightItem: () => void;
 
   videoState?: VideoState;
@@ -25,6 +26,7 @@ export interface GoogleTvContextState {
 
 const initialState: GoogleTvContextState = {
   spotlightItem: SPOTLIGHT_TV_ITEM,
+  isOnTop: true,
   setSpotlightItem: (spotlightItem: TvItem) => {},
   resetSpotlightItem: () => {},
   startPlayingVideo: () => {},
@@ -36,8 +38,8 @@ export const GoogleTvContext = React.createContext<GoogleTvContextState>(initial
 function GoogleTvProvider({ children }: any) {
   const [googleTvState, setGoogleTvState] = useState(initialState);
   const setSpotlightItem = useCallback(
-    (spotlightItem: TvItem) => {
-      setGoogleTvState({ ...googleTvState, spotlightItem });
+    (spotlightItem: TvItem, isOnTop = true) => {
+      setGoogleTvState({ ...googleTvState, spotlightItem, isOnTop });
     },
     [googleTvState, setGoogleTvState],
   );

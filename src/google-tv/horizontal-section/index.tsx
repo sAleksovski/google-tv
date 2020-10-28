@@ -28,7 +28,7 @@ function HorizontalSection({ title, items, scrollToTop }: HorizontalSectionProps
 
   const onBecameFocused = useCallback(
     ({ x }, { item }) => {
-      setSpotlightItem(item);
+      setSpotlightItem(item, !!scrollToTop);
       if (scrollToTop) {
         scrollToY(0);
       } else {
